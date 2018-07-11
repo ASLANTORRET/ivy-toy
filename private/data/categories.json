@@ -1,0 +1,9 @@
+[
+  {"name":"Девочкам", "position": 1},
+  {"name":"Мальчикам", "position": 2},
+  {"name":"Аксессуары", "position": 3},
+  {"name":"Игрушки", "position": 4},
+  {"name":"Акции и распродажи", "position": 5},
+  {"name":"Бестселлеры", "position": 6},
+  {"name":"Новинки", "position": 7}
+]

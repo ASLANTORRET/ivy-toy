@@ -1,0 +1,132 @@
+// @import "base/extends";
+// @import "base/animations";
+// @import "base/forms";
+//
+// @import "module/loading";
+// @import "module/login";
+// @import "module/signup";
+//
+// @import "state/navbar";
+
+// body {
+//   margin-bottom: 60px;
+// }
+//
+// nav {
+//   .nav-wrapper {
+//     padding-left: 10px;
+//     form {
+//       height: 100%;
+//       overflow: hidden;
+//       .input-field {
+//         height: 100%;
+//       }
+//     }
+//   }
+//   .brand-logo {
+//     position: relative;
+//     float:left;
+//     margin-right: 10px;
+//   }
+//
+//   .button-collapse {
+//     float:right;
+//   }
+// }
+//
+//
+// // .to-cart {
+// //   position: fixed;
+// //   right: 10px;
+// //   bottom: 10px;
+// //   z-index: 9999;
+// // }
+//
+// // .to-cart .btn-floating {
+// //   border-radius: 25px;
+// //   width: 100px;
+// // }
+// // .to-cart .btn-floating i {
+// //   width: auto;
+// // }
+// .card {
+//   .card-content {
+//     font-size: 14px;
+//     padding: 5px;
+//     height: 75px;
+//     text-overflow: ellipsis;
+//   }
+//   .card-image {
+//     img {
+//       height: 100%;
+//       width: auto;
+//       margin: auto;
+//     }
+//   }
+// }
+// .s25 {
+//   width: 20%;
+//   margin-left: auto;
+//   left: auto;
+//   right: auto;
+// }
+// .fixed {
+//   position: fixed;
+// }
+// footer.page-footer.fixed {
+//   margin: 0px;
+//   padding: 0px;
+//   width: 100%;
+//   bottom: 0;
+//   text-align: center;
+//   z-index: 10;
+//   nav {
+//     height: auto;
+//     ul {
+//       li {
+//         width: 20%;
+//         a{
+//           display: block;
+//         }
+//       }
+//     }
+//   }
+// }
+// .btn-order, .btn-width100 {
+//   width: 100%;
+// }
+// .fixed-action-btn.add-address-wrap {
+//   bottom: 65px
+// }
+// .container {
+//   .row {
+//     .col.s6.product:nth-child(2n+1) {
+//       clear:right;
+//     }
+//     .col.s6.product:nth-child(2n) {
+//       clear:left;
+//     }
+//
+//   }
+// }
+// .carousel {
+//   .carousel-item {
+//     img {
+//       height: 100%;
+//       width: auto;
+//       margin: auto;
+//     }
+//   }
+// }
+//
+// .modal.bottom-sheet.open {
+//   z-index: 1003;
+//   display: block;
+//   opacity: 1;
+//   bottom: 0px;
+// }
+// #materialize-modal-overlay-11 {
+//   z-index: 1002;
+//   display: block;
+//   opacity: 0.5;
+// }

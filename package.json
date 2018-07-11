@@ -1,0 +1,94 @@
+{
+  "name": "mimimishki-shop",
+  "version": "1.0.0",
+  "description": "Awesome shop for mimimishki.",
+  "scripts": {
+    "start": "meteor --settings settings-development.json",
+    "test": "meteor test --driver-package practicalmeteor:mocha --port 5000",
+    "chimp-watch": "chimp --ddp=http://localhost:3000 --watch --mocha --path=tests",
+    "chimp-test": "chimp --ddp=http://localhost:3000 --mocha --path=tests",
+    "staging": "meteor deploy staging.meteor.com --settings settings-development.json",
+    "production": "meteor deploy production.meteor.com --settings settings-production.json",
+    "postinstall": "ln -f node_modules/materialize-css/js/date_picker/picker.js node_modules/materialize-css/js/date_picker/picker.date.js node_modules/materialize-css/dist/js/"
+  },
+  "devDependencies": {
+    "chimp": "^0.47.2",
+    "eslint": "^3.15.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-meteor": "^4.0.1",
+    "eslint-plugin-react": "^6.9.0",
+    "eslint-plugin-import": "^2.2.0"
+  },
+  "eslintConfig": {
+    "parserOptions": {
+      "ecmaFeatures": {
+        "jsx": true
+      }
+    },
+    "plugins": [
+      "meteor",
+      "react"
+    ],
+    "extends": [
+      "airbnb/base",
+      "plugin:meteor/guide",
+      "plugin:react/recommended"
+    ],
+    "globals": {
+      "server": false,
+      "browser": false,
+      "expect": false
+    },
+    "rules": {
+      "import/no-unresolved": 0,
+      "no-underscore-dangle": [
+        "error",
+        {
+          "allow": [
+            "_id",
+            "_ensureIndex",
+            "_verifyEmailToken",
+            "_resetPasswordToken",
+            "_name"
+          ]
+        }
+      ]
+    }
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.23.0",
+    "babel-runtime": "^6.23.0",
+    "base64-img": "^1.0.3",
+    "bcrypt": "^1.0.2",
+    "body-parser": "^1.17.1",
+    "bootstrap": "^3.3.7",
+    "buffer": "^5.0.6",
+    "crypto": "0.0.3",
+    "deasync": "^0.1.9",
+    "eslint": "^3.16.0",
+    "eslint-plugin-react": "^6.10.0",
+    "fs": "0.0.1-security",
+    "gridfs-stream": "^1.1.1",
+    "is-property": "^1.0.2",
+    "jquery": "^2.2.4",
+    "jquery-validation": "^1.15.1",
+    "jquery.inputmask": "^3.3.3",
+    "kkb-epay": "^1.1.0",
+    "materialize-css": "^0.98.0",
+    "meteor-node-stubs": "^0.2.3",
+    "moment": "^2.17.1",
+    "node-base64-image": "^1.0.3",
+    "react": "^15.4.1",
+    "react-addons-pure-render-mixin": "^15.2.1",
+    "react-bootstrap": "^0.30.2",
+    "react-dom": "^15.4.1",
+    "react-komposer": "^2.0.0",
+    "react-router": "^3.0.2",
+    "react-router-bootstrap": "^0.23.1",
+    "shelljs": "^0.7.5",
+    "slick-carousel": "^1.6.0",
+    "trumbowyg": "^2.5.0",
+    "xml2js": "^0.4.17"
+  }
+}

@@ -1,0 +1,13 @@
+// import { BrowserPolicy } from 'meteor/browser-policy-common';
+// e.g., BrowserPolicy.content.allowOriginForAll( 's3.amazonaws.com' );
+BrowserPolicy.content.allowOriginForAll( 'fonts.googleapis.com' );
+BrowserPolicy.content.allowOriginForAll( 'fonts.gstatic.com' );
+BrowserPolicy.content.allowOriginForAll( 'placehold.it' );
+BrowserPolicy.content.allowOriginForAll( 'placeholdit.imgix.net' );
+BrowserPolicy.content.allowOriginForAll( 'lorempixel.com' );
+BrowserPolicy.content.allowOriginForAll( 's.smmplanner.com' );
+BrowserPolicy.content.allowOriginForAll( 'api-maps.yandex.ru' );
+BrowserPolicy.content.allowOriginForAll( '*.maps.yandex.net' );
+BrowserPolicy.content.allowOriginForAll( 'suggest-maps.yandex.ru' );
+BrowserPolicy.content.allowOriginForAll( 'mc.yandex.ru' );
+BrowserPolicy.content.allowEval( 'api-maps.yandex.ru' );

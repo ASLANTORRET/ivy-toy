@@ -1,0 +1,100 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta name="viewport" content="width=device-width" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>Заказ {{ id }}  Мимимишки.</title>
+  <!-- <link href="styles.css" media="all" rel="stylesheet" type="text/css" /> -->
+</head>
+
+<body itemscope itemtype="http://schema.org/EmailMessage">
+  <table>
+    <tr>
+      <td width="600">
+        <table width="100%" style="border: 1px solid #eee;">
+          <tbody>
+            <tr>
+              <th style="text-align: left; padding: 10px; border-bottom: 1px solid #eee; border-right: 1px solid #eee;">Номер заказа</th>
+              <td style="text-align: left; padding: 10px; border-bottom: 1px solid #eee;">{{ id }}</td>
+            </tr>
+            <tr>
+              <th style="text-align: left; padding: 10px; border-bottom: 1px solid #eee; border-right: 1px solid #eee;">Дата</th>
+              <td style="text-align: left; padding: 10px; border-bottom: 1px solid #eee;">{{ createdAt }}</td>
+            </tr>
+            <tr>
+              <th style="text-align: left; padding: 10px; border-bottom: 1px solid #eee; border-right: 1px solid #eee;">Имя</th>
+              <td style="text-align: left; padding: 10px; border-bottom: 1px solid #eee;">{{ name }}</td>
+            </tr>
+            <tr>
+              <th style="text-align: left; padding: 10px; border-bottom: 1px solid #eee; border-right: 1px solid #eee;">Телефон</th>
+              <td style="text-align: left; padding: 10px; border-bottom: 1px solid #eee;">{{ phone }}</td>
+            </tr>
+            <tr>
+              <th style="text-align: left; padding: 10px; border-bottom: 1px solid #eee; border-right: 1px solid #eee;">E-mail</th>
+              <td style="text-align: left; padding: 10px; border-bottom: 1px solid #eee;">{{ email }}</td>
+            </tr>
+            <tr>
+              <th style="text-align: left; padding: 10px; border-bottom: 1px solid #eee; border-right: 1px solid #eee;">Доставка</th>
+              <td style="text-align: left; padding: 10px; border-bottom: 1px solid #eee;">{{ delivery }}</td>
+            </tr>
+            {{#if address}}
+              <tr>
+                <th style="text-align: left; padding: 10px; border-right: 1px solid #eee;">Адрес</th>
+                <td style="text-align: left; padding: 10px;">{{ address }}</td>
+              </tr>
+            {{/if}}
+          </tbody>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <table className="order-products" style="border: 1px solid #eee;">
+          <thead>
+            <tr>
+                <th data-field="id" style="text-align: left; padding: 10px; border-bottom: 1px solid #eee; border-right: 1px solid #eee;"></th>
+                <th data-field="name" style="text-align: left; padding: 10px; border-bottom: 1px solid #eee; border-right: 1px solid #eee;">Наименование</th>
+                <th style="text-align: left; padding: 10px; border-bottom: 1px solid #eee; border-right: 1px solid #eee;">Количество</th>
+                <th data-field="price" style="text-align: left; padding: 10px; border-bottom: 1px solid #eee;">Стоимость</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{#each products}}
+              <tr>
+                <td style="text-align: left; padding: 10px; border-bottom: 1px solid #eee; border-right: 1px solid #eee;">
+                  <img src="{{ link }}" class="responsive-img" width="100"/>
+                </td>
+                <td style="text-align: left; padding: 10px; border-bottom: 1px solid #eee; border-right: 1px solid #eee;">{{ name }}</td>
+                <td style="text-align: left; padding: 10px; border-bottom: 1px solid #eee; border-right: 1px solid #eee;">{{ quantity }} x {{ price }}</td>
+                <td style="text-align: left; padding: 10px; border-bottom: 1px solid #eee;">{{ sum }}</td>
+              </tr>
+            {{/each}}
+          </tbody>
+          <tfoot>
+            <tr>
+              <th colSpan="3" style="text-align: left; padding: 10px; border-bottom: 1px solid #eee; border-right: 1px solid #eee;">Сумма</th>
+              <th style="text-align: left; padding: 10px; border-bottom: 1px solid #eee;">{{ subTotal }}</th>
+            </tr>
+            {{#if packaging }}
+              <tr>
+                <th colSpan="2" style="text-align: left; padding: 10px; border-bottom: 1px solid #eee; border-right: 1px solid #eee;">Подарочная упаковка</th>
+                <th colSpan="2" style="text-align: left; padding: 10px; border-bottom: 1px solid #eee; border-right: 1px solid #eee;">{{ packagingQuantity }}</th>
+                <th style="text-align: left; padding: 10px; border-bottom: 1px solid #eee;">{{ packagingPrice }}</th>
+              </tr>
+            {{/if}}
+            {{#if shipping }}
+              <tr>
+                <th colSpan="3" style="text-align: left; padding: 10px; border-bottom: 1px solid #eee; border-right: 1px solid #eee;">Доставка</th>
+                <th style="text-align: left; padding: 10px; border-bottom: 1px solid #eee;">{{ shipping }}</th>
+              </tr>
+            {{/if}}
+            <tr>
+              <th colSpan="3" style="text-align: left; padding: 10px; border-bottom: 1px solid #eee; border-right: 1px solid #eee;"></th>
+              <th style="text-align: left; padding: 10px;">{{ total }}</th>
+            </tr>
+          </tfoot>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
